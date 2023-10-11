@@ -8,29 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" defer>
-    <link rel="stylesheet" href="/Project-SIMPLON/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" >
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" ></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-info bg-gradient">
+<nav class="navbar navbar-expand-lg  bg-gradient mb-0" style="background-color: red;">
   <div class="container">
     <a class="navbar-brand" href="#">
-        <img src="/Project-SIMPLON/image/simplon.jpg" alt="Bootstrap" width="150" height="70" >
+        <img src="image/simplon.jpg" alt="Simplon" width="150" height="70" class="border border-primary" style="border-radius: 3%;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " style="margin-left: 8rem;" id="navbarNav">
-      <ul class="navbar-nav display-6 row align-items-start custom-line" >
+      <ul class="navbar-nav  row align-items-start custom-line" style="font-size: 20px;">
         <li class="nav-item col" style="margin-left: 2rem;">
-          <a class="nav-link" aria-current="page" href="#">Accueil</a>
+          <a class="nav-link text-white" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item col" style="margin-left: 2rem;">
-          <a class="nav-link" href="#form">Inscription</a>
+          <a class="nav-link text-white" href="index.php">Inscription</a>
         </li>
         <li class="nav-item col" style="margin-left: 2rem;">
-          <a class="nav-link" href="Listes.php">Listes</a>
+          <a class="nav-link text-white" href="Listes.php">Listes</a>
         </li>
        
       </ul>
@@ -38,16 +39,18 @@
   </div>
 </nav>
 
-<div class="card text-center">
+<div class="card " id="accueil">
   
-  <div class="card-body">
-    <h5 class="card-title fs-1">Simplon dans le Pays</h5>
-    <p class="card-text fs-5">Partant du constat des difficultés de l’insertion de la jeunesse ivoirienne dans le milieu du digital pour manque de compétences, Simplon s’est implanté en Côte d’Ivoire grâce à Crée par Raïssa BanhoroMTN fondation, soucieux d’appuyer l'éducation en Côte d’Ivoire, a rejoint le projet et une seconde fabrique a ainsi pu voir le jour. Simplon en Côte d’Ivoire voit compte à ce jour le 48 jeunes Ivoiriens formés et  insérés. En quelques chiffres, Simplon en Côte d’Ivoire c’est  988 personnes sensibilisées au digital dont  290 enfants,  230 femmes et 17 personnes en situation de handicap. Notre mission est de participer au développement du pays dans l’éducation, l’emploi et l’économie numérique.</p>
+  <div class="card-body ">
+    <h5 class="card-title fs-1 text-center">Simplon dans le Pays</h5>
+    <p class="card-text fs-5 text-left">Partant du constat des difficultés de l’insertion de la jeunesse ivoirienne dans le milieu du digital pour manque de compétences, Simplon s’est implanté en Côte d’Ivoire grâce à Crée par Raïssa BanhoroMTN fondation, soucieux d’appuyer l'éducation en Côte d’Ivoire, a rejoint le projet et une seconde fabrique a ainsi pu voir le jour. Simplon en Côte d’Ivoire voit compte à ce jour le 48 jeunes Ivoiriens formés et  insérés. En quelques chiffres, Simplon en Côte d’Ivoire c’est  988 personnes sensibilisées au digital dont  290 enfants,  230 femmes et 17 personnes en situation de handicap. Notre mission est de participer au développement du pays dans l’éducation, l’emploi et l’économie numérique.</p>
     
 </div>
-<div class="containerForm">
-
-<?php
+<div class="container my-5 fs-5" id="form" style="color: red;">
+  <div class="row justify-content-center ">
+    <div class="col-md-6">
+    
+      <?php
            if (isset($_GET['reg_err']))
            {   $err = htmlspecialchars($_GET['reg_err']);
 
@@ -105,7 +108,7 @@
     
         ?>
 
-<form class="row g-2 " method="POST"  id="form">
+<form class="row g-2  text-center" method="POST" >
   <div class="row-md">
     <label  class="form-label">Nom</label>
     <input type="text" class="form-control"  name="nom" required >
@@ -116,38 +119,52 @@
     <input type="text" class="form-control"  name="prenom" required>
     
   </div>
-  <div class="col-md">
+  <div class="row-md">
     <label  class="form-label">email</label>
      
       <input type="email" class="form-control"   name="email" required>
      
   </div>
-  <div class="col-md">
+  <div class="row-md">
     <label class="form-label">Numero</label>
     <input type="text" class="form-control"  name="numero" required>
     
   </div>
   
   
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Envoyer</button>
+  <div class="col-12 text-center mt-3">
+    <button class="btn btn-primary my-button" type="submit">Envoyer</button>
   </div>
 </form>
+
+    </div>
+  </div>
 </div>
 
-
-    <div class="footer-basic p-3 mb-2 bg-black text-white">
+<div class="footer-basic p-3 mb-2 bg-black text-white">
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Accueil</a></li>
-                <li class="list-inline-item"><a href="#">Inscription</a></li>
-                <li class="list-inline-item"><a href="#">Listes</a></li>
+            <ul class="list-inline" >
+                <li class="list-inline-item" ><a href="#accueil">Accueil</a></li>
+                <li class="list-inline-item"><a href="#form">Inscription</a></li>
+                <li class="list-inline-item"><a href="Listes.php">Listes</a></li>
                 
             </ul>
             <p class="copyright fs-5">Simplon ci © 2023</p>
         </footer>
     </div>
+    <style> 
+      .social > a:hover{
+        background-color: red;
+      }
+      .list-inline-item > a:hover{
+        color: red;
+      } 
+        .my-button:hover {
+            background-color: red;
+            color: white; 
+        }
+    </style>
     
 
    

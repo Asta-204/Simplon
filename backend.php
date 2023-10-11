@@ -33,10 +33,10 @@ if(isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['email']) A
                                'numero'=> $numero
                          ));
                          header('Location: index.php?reg_err=success');
-                    }else header('Location: inscription.php?reg_err=numero_length');           
-                }else header('Location: inscription.php?reg_err=email_length');
-            }else header('Location: inscription.php?reg_err=prenom_length');
-        }else header('Location: inscription.php?reg_err=nom_length');
+                    }else header('Location: index.php?reg_err=numero_length');           
+                }else header('Location: index.php?reg_err=email_length');
+            }else header('Location: index.php?reg_err=prenom_length');
+        }else header('Location: index.php?reg_err=nom_length');
     }else header('Location: index.php?reg_err=already');
 }
 ?>

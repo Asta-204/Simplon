@@ -45,7 +45,7 @@ INSERT INTO `inscription` (`id`, `nom`, `prenom`, `email`, `numero`) VALUES
 (3, 'soum', 'sidi', 'sidi@gmail.com', 142127104),
 (4, 'aka', 'koffi', 'jeanneakagbor215@gmail.com', 142127104);
 
---
+--   
 -- Index pour les tables déchargées
 --
 
