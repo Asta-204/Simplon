@@ -40,10 +40,7 @@ CREATE TABLE `inscription` (
 --
 
 INSERT INTO `inscription` (`id`, `nom`, `prenom`, `email`, `numero`) VALUES
-(1, 'AKAGBOR', 'KOFFI KEKELI CEDRIC', 'kekeli.akagbor@gmail.com', 556273199),
-(2, 'soumahoro', 'sidi', 'sidi@gmail.com', 142127104),
-(3, 'soum', 'sidi', 'sidi@gmail.com', 142127104),
-(4, 'aka', 'koffi', 'jeanneakagbor215@gmail.com', 142127104);
+(1, 'AKAGBOR', 'KOFFI KEKELI CEDRIC', 'kekeli.akagbor@gmail.com', 556273199);
 
 --   
 -- Index pour les tables déchargées
